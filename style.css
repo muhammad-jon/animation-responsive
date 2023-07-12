@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid;
+  margin: 1rem;
+}
+
+/* .card-1 {
+  background-color: aqua;
+}
+.card-2 {
+  background-color: blue;
+} */
+
+.card-3 {
+  background-color: yellow;
+}
+.card-4 {
+  background-color: violet;
+}
+.card-5 {
+  background-color: chocolate;
+}
+
+.cards {
+  display: flex;
+}
+
+.card {
+  /* flex-basis: calc(100% / 5 - 32px); */
+}
+
+.card-1 {
+  max-width: 350px;
+}
+
+/* @media (min-width: 0) and (max-width: 481px) {
+  .card {
+    flex-basis: calc(100% / 1 - 32px);
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+  .card-5 {
+    background-color: black;
+    color: white;
+  }
+}
+@media (min-width: 481px) and (max-width: 600px) {
+  .card {
+    flex-basis: calc(100% / 2 - 32px);
+  }
+}
+@media (min-width: 600px) and (max-width: 769px) {
+  .card {
+    flex-basis: calc(100% / 3 - 32px);
+  }
+}
+@media (min-width: 769px) and (max-width: 1000px) {
+  .card {
+    flex-basis: calc(100% / 4 - 32px);
+  }
+} */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .cards {
+    flex-direction: column-reverse;
+  }
+  .card-1 {
+    max-width: 100%;
+  }
+}
+
+@keyframes aylan {
+  from {
+    transform: translate(0px) rotate(0);
+    border-radius: 0;
+    background-color: aquamarine;
+    /* background-image: linear-gradient(30deg, red 50%, transparent 50% 100%); */
+  }
+  to {
+    transform: translate(300px) rotate(360deg);
+    border-radius: 50%;
+    background-color: red;
+    /* background-image: linear-gradient(360deg, red 50%, transparent 50% 100%); */
+  }
+}
+
+body {
+  /* background-image: linear-gradient(-188deg, red 50%, transparent 50% 100%); */
+}
+
+.square {
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  /* animation-name: aylan;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2; */
+  /* animation-direction: alternate; */
+  /* animation-delay: 1s; */
+  /* animation-fill-mode: forwards; */
+  animation: aylan 4s linear 1s infinite alternate backwards;
+}
+
+header {
+  max-width: 600px;
+}
+header h1 {
+  font-size: 100px;
+}
